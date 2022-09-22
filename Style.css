@@ -1,0 +1,46 @@
+h1 {
+    background-color: #3A515A;
+    padding: 20px;
+    text-align: center;
+    color: rgb(144, 144, 255);
+    font-family: verdana;
+    font-size: 300%;
+  }
+  
+  
+  .topnav {
+    overflow: hidden;
+    background-color: #47AED7;
+  }
+  
+  
+  .topnav a {
+    float: left;
+    display: block;
+    color: #000000;
+    font-family: verdana;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  
+  .topnav a:hover {
+    background-color: #47C9D7;
+    color: black;
+  }
+  
+  body {
+    background-color: #3A515A;
+    font-family: verdana;
+  }
+  
+  p {
+    color: #ffffff;
+    font-family: verdana;
+  }
+  
+  h2 {
+      color:#ffffff;
+      font-family: verdana;
+  }
