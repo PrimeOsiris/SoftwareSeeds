@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="Style.css">
+  <style>
+    p {
+        outline-color:rgb(0, 0, 0);
+        margin: 25px 200px 75px 200px;
+    }
+    p.solid {outline-style: solid;}
+
+    #FrontPage {
+    text-align: center;
+    }
+
+    </style>
+</head>
+
+<body>
+
+<div class="topnav">
+    <a href="Index.html">Home</a>
+    <a href="Product.html">Code</a>
+    <a href="Info.html">Contact Us</a>
+</div>
+
+<hr>
+<div id="FrontPage">
+    <h1>About the Creator</h1>
+    <p class="solid">
+        My name is Lochlan Dunne and I first came up with the idea for this project as part of a University Project which I had not realised I would have to implement/create at the time.
+        For this reason, I was not prepared, mentally at least, for the task of implementing my proposal and may have set me expectations a little high.
+        I enjoy the outcomes and the process of creating things, with writing being my main creative outlet. For this reason, I find programming fairly enjoyable as it is, to me at least,
+        a different way of using writing to create something. I intend for this website to be a resource for people who are learning to use that writing, containing examples that can be followed.
+    </p>
+</div>
+
+<script src="https://unpkg.com/vue@3"></script>
+<div id="FeedbackPage">
+    <div class="ComplaintForm">
+        <label>Complaint/Suggestion:</label><br>
+        <input @keyup.enter="saveItem"
+        type="text" v-model="newSuggest" placeholder="Suggestion/Complaint" size="200"><br>
+        <button :disabled="newSuggest.length < 10"
+        @click="saveItem" 
+        class="ComBtn ComBtn-primary">File Suggestion/Complaint</button>
+    </div>
+</div>
+<script>
+const prjoectPain = Vue.createApp({
+    data(){
+        return{
+            newSuggest:"",
+            suggestions:[
+                {id: 1, label: "Improve formatting."}
+            ],
+        }
+    },
+    methods:{
+        saveItem(){
+            this.suggestions.push({id:this.suggestions.length+1, label: this.newSuggest})
+            this.newSuggest=""
+        }
+    }
+})
+.mount("#FeedbackPage")
+</script>
+
+<div id="FeedbackPage">
+    
+</div>
+
+</body>
+</html>

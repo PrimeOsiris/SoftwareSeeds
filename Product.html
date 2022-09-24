@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="Style.css">
+  <style>
+    p {
+        outline-color:rgb(0, 0, 0);
+        margin: 25px 200px 75px 200px;
+    }
+    p.solid {outline-style: solid;}
+
+    img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="topnav">
+        <a href="Index.html">Home</a>
+        <a href="Product.html">Code</a>
+        <a href="Info.html">Contact Us</a>
+    </div>
+
+<img src="https://raw.githubusercontent.com/PrimeOsiris/SoftwareSeeds/main/Logo.png" style="width:25%;">
+
+    <div id="FrontPage">
+        <p class="solid">
+            {{header}}
+        </p>
+    </div>
+<script src="https://unpkg.com/vue@3"></script>
+<script>
+    const prjoectPain = Vue.createApp({
+        data(){
+            return{
+                header: "Language Lists.",
+
+                items: [
+                "Chip Sets",
+                "Java Script"
+                ]
+            }
+        }
+    })
+    .mount("#FrontPage")
+</script>
+<div class="topnav">
+  <a href="https://github.com/PrimeOsiris/Pholio2">Chip Sets</a>
+  <a href="https://github.com/PrimeOsiris/Pholio1">Java Script/HTML/CSS</a>
+</div>
+
+</body>
+</html>
